@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Onclick Demo</title>
+</head>
+<body>
+    <h1 id = "backgroundToChange" onclick="changeBackground('pink');">Click Me</h1>
+
+    <script>
+        function changeBackground(newColor) {
+           // const h1 = document.getElementsByTagName('h1')[0];
+          // h1.style.background = 'orange';
+          //document.getElementById('backgroundToChange').style.background = newColor;
+          document.querySelector('#backgroundToChange').style.background = newColor;
+        }
+    </script>
+</body>
+</html>

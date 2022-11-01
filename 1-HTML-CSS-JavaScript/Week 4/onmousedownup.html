@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Onmousedown & Onmouseup Demo</title>
+</head>
+<body>
+    <h1 id= "backgroundToChange" onmousedown="changeBackground('orange');" onmouseup="changeBackground('lightblue')">Click Me</h1>
+
+    <script>
+        const h1 = document.getElementsByTagName('h1')[0];
+        
+        function changeBackground(newColor) {
+            //document.getElementsByTagName('h1')[0].style.background = newColor;
+            //document.getElementById('backgroundToChange').style.background = newColor;
+            document.querySelector('#backgroundToChange').style.background = newColor;
+        }
+        // function changeBackground() {
+        //     h1.style.background = 'orange';
+        // }
+        // function revertBackground() {
+        //     h1.style.background = 'white';
+        // }
+    </script>
+</body>
+</html>

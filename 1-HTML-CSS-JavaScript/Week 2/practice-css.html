@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>CSS Practice: CSS Corner Cafe</title>
+    <link rel="stylesheet" href="css/practice-styles.css">
+</head>
+<body>
+    <h1>CSS Corner Cafe</h1>
+    <section>
+        <h2>Menu</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Coffee</td>
+                    <td>$2</td>
+                </tr>
+                <tr>
+                    <td>Tea</td>
+                    <td>$1.50</td>
+                </tr>
+                <tr>
+                    <td>Mimosa</td>
+                    <td>$9.50</td>
+                </tr>
+                <tr>
+                    <td>Irish Coffee</td>
+                    <td>$8.75</td>
+                </tr>
+                <tr>
+                    <td>Chicken & Waffles</td>
+                    <td>$12</td>
+                </tr>
+                <tr>
+                    <td>Blueberry Pancakes</td>
+                    <td>$6</td>
+                </tr>
+                <tr>
+                    <td>Denver Omelette</td>
+                    <td>$13.50</td>
+                </tr>
+                <tr>
+                    <td>Eggs Benedict</td>
+                    <td>$15.50</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        <h3>Submit Your Review</h3>
+        <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
+            <fieldset>
+                <legend>Your Information</legend>
+                <div>
+                    <label for="firstName">First Name:</label> 
+                    <input type="text" id="firstName" name="firstName" placeholder="Your First Name">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Your Last Name">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email Address">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Would you Recommend</legend>
+                <div>
+                    <input type="radio" id="absolutely" name="recommendation" value="absolutely" />
+                    <label for="absolutely">Absolutely</label>
+                    <input type="radio" id="possibly" name="recommendation" value="possibly" />
+                    <label for="possibly">Possibly</label>
+                    <input type="radio" id="no" name="recommendation" value="no" />
+                    <label for="no">No</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>What you enjoyed</legend>
+                <div>
+                    <input type="checkbox" id="food" name="rating" value="food" />
+                    <label for="food">Food</label>
+                    <input type="checkbox" id="service" name="rating" value="service" />
+                    <label for="service">Service</label> 
+                    <input type="checkbox" id="atmosphere" name="rating" value="atmosphere" />
+                    <label for="atmosphere">Atmosphere</label>
+                    <input type="checkbox" id="price" name="rating" value="price" />
+                    <label for="price">Price</label>
+                    <input type="checkbox" id="na" name="rating" value="na" />
+                    <label for="na">NA</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <Legend>Your overall rating</Legend>
+                <div>
+                      <label for="rating"></label>
+                    0 <input type="range" id="rating" name="rating" min="0" max="10" /> 10
+                </div>
+        </fieldset> 
+        <fieldset>
+            <legend>Comments</legend>
+            <div>
+                <label for="comments"></label> 
+                <input type="text" id="comments" name="comments" placeholder=" enter comments here" maxlength="500">
+            </div>
+        </fieldset>         
+            <input type="submit" id="submit-btn" />
+        </form>
+    </section>
+    <section>
+        <h3>Contact</h3>
+        <p>Call us at: <a href="tel:+15555551212">1-555-555-1212</a></p>
+        <address>
+            CSS Corner Cafe<br />
+            101 W Main St<br />
+            Bellevue, WA 98004
+        </address>
+    </section>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matching Game 2</title>
+    <style>
+        
+        
+        img {
+            position: absolute; 
+            width: 50px;      
+            height: 50px;
+            border-style: solid rgb(22, 143, 58);
+        }
+
+        div {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+           
+        }
+        #rightSide {
+            left: 500px;
+            border-left: 5px solid;
+            background-image: url("Images/200w\ \(1\).webp");
+        }
+        #leftSide {
+            background-image: url("Images/200w\ \(1\).webp");
+        }
+        h1{
+            color: bisque;
+            font-size: 50px;
+            
+        }
+        p{
+            color:bisque;
+            font-size: 25px;
+        }
+               
+       </style>
+</head>
+<body onload="generateFaces()">
+    <audio controls autoplay loop src="Sound/cute-duck-im-about-to-whip-somebodys-ass.mp3"></audio>
+    <h1>Matching Game</h1>
+    <p>Click on the extra smiling face on the left</p>
+    <div id="leftSide"></div>
+    <div id="rightSide"></div>
+    
+    
+    <script>
+        let numberOfFaces = 5;
+        const theLeftSide = document.querySelector('#leftSide');
+        const theRightSide = document.querySelector('#rightSide');
+        document.body.style.backgroundImage = "url('Images/200w.webp')";
+  
+
+        function generateFaces() {
+            for (let i = 0; i < numberOfFaces; i++) {
+            
+                const face = document.createElement('img');
+                face.src = 'Images/dancing-chicken.gif';
+                const randomTop = Math.floor(Math.random()* 400) + 1;
+                const randomLeft = Math.floor(Math.random()* 400) + 1;
+                face.style.top = randomTop + 'px';
+                face.style.left = randomLeft + 'px';
+                theLeftSide.appendChild(face);
+
+            
+            }
+            theLeftSide.lastChild.addEventListener('click', nextLevel);
+            document.body.addEventListener('click', gameOver);
+
+            const leftSideImages = theLeftSide.cloneNode(true);
+            leftSideImages.id = 'newrightsidecopiedfromleft';
+            leftSideImages.removeChild(leftSideImages.lastChild);
+            theRightSide.appendChild(leftSideImages);
+        }
+        function nextLevel(event) {
+            event.stopPropagation();
+            numberOfFaces += 5;
+
+            while (theLeftSide.firstChild) {
+                theLeftSide.removeChild(theLeftSide.firstChild);
+            } 
+            while (theRightSide.firstChild) {
+                theRightSide.removeChild(theRightSide.firstChild);
+            }
+
+            generateFaces();
+        }
+        function gameOver() {
+            alert('Game Over!');
+            face.removeEventListener('click' , nextLevel);
+            document.body.removeEventListener('click', gameOver);
+        }
+    </script>
+</body>
+</html>

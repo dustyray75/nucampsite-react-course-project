@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Bellow is an example of using an onclick listener
+    <button id="button1" onclick="doathing()">button 1</button>
+
+    <script>
+        function doathing() {
+            console.log('testing doathing')
+        }
+    </script>
+
+    Bellow is an example of using querySelector
+    <button id="button3">button 3</button>
+    <script>
+        document.querySelector('#button3').onclick = doAThirdThing
+
+        function doAThirdThing() {
+            console.log('do a third thing')
+        }
+    </script>
+
+
+    Bellow is an example of using addEventListener
+    <button id="button2">button 2</button>
+    <script>
+
+        let button = document.querySelector('#button2');
+        button.addEventListener('click', doTwoThings())
+        button.addEventListener('click', one)
+        // you can add and remove event listeners.
+        //button.removeEventListener("click", doTwoThings(), true);
+        function doTwoThings() {
+            one()
+            console.log('doingTwoThings')
+        }
+
+        function one() {
+            console.log('regular function')
+        }
+
+
+        $(document).ready(function () {
+            $("#button2").click(function () {
+                $(this).hide();
+            });
+        });
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(0, 162, 255);
+    margin: 50px;
+    font-size: larger;
+    text-align: center
+}
+
+Img {
+    margin: 50px;
+    border-style: double; color: blue;
+}
+audio {
+    margin: 50px;
+    border-style: double;
+    background-color: blue;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    margin: 20px;
+}
+h2 {
+    text-indent: 35px;
+}
