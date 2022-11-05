@@ -19,11 +19,11 @@ class CandyColoredHeart extends Component {
             <div className='Heart'>
                 <div className='heart-img'>
                     <HeartSVG col={randomCol} />
+                    <p className='heart-message'>{this.props.msg}</p>
                 </div>
-                <p className='heart-message'>{this.props.msg}</p>
             </div>
-        )
+        );
     }
-}
+};
 
 export default CandyColoredHeart

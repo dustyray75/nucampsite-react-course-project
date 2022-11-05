@@ -1,4 +1,3 @@
-//import Heart from './Heart';
 import { Component } from 'react';
 import CandyColoredHeart from './CandyColoredHeart';
 

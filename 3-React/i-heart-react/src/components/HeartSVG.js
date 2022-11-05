@@ -4,7 +4,6 @@ class HeartSVG extends Component {
     render() {
         return (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3">
-
                 <g fill={this.props.col} stroke='#8a8791' strokewidth='3'>
                     <path d="M 297.29747,550.86823 
                 C 283.52243,535.43191 249.1268,505.33855 220.86277,483.99412 
