@@ -20,7 +20,7 @@ function App() {
         <Route path='contact' element={<ContactPage />} />
         <Route path='directory' element={<CampsitesDirectoryPage />} />
         <Route path='about' element={<AboutPage />} />
-        <Route 
+        <Route
           path='directory/:campsiteId'
           element={<CampsiteDetailPage />}
         />
