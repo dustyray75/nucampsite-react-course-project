@@ -8,7 +8,7 @@ const Footer = () => {
                 <Row>
                     <Col xs={{ size: 4, offset: 1 }} sm='2'>
                         <h5>Links</h5>
-                        <ul ClassName='list-unstyled'>
+                        <ul className='list-unstyled'>
                             <li>
                                 <Link to='/'>Home</Link>
                             </li>
