@@ -28,7 +28,8 @@ const CommentForm = ({ campsiteId }) => {
                 <ModalBody>
                     <Formik
                         initialValues={{ author: '', commentText: '' }}
-                        onSubmit={(values) => handleSubmit(values)}
+                        //onSubmit={(values) => handleSubmit(values)}
+                        onSubmit={handleSubmit}
                         validate={validateCommentForm}>
                         <Form>
                             <FormGroup>
