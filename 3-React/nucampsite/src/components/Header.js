@@ -39,7 +39,7 @@ const Header = () => {
                         </NavLink>
                     </NavItem>
                 </Nav>
-                {UserLoginForm()}
+                <UserLoginForm />
             </Collapse>
         </Navbar>
     );

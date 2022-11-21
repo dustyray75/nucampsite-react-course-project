@@ -27,7 +27,7 @@ const UserLoginForm = () => {
 
     return (
         <>
-            <span className='navbar-text-auto'>
+            <span className='navbar-text ml-auto'>
                 {currentUser ? (
                     <div style={{ width: '4rem', height: '4rem' }}>
                         <img
