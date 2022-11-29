@@ -11,19 +11,15 @@ const CommentsList = ({ campsiteId }) => {
     const isLoading = useSelector((state) => state.comments.isLoading);
     const errMsg = useSelector((state) => state.comments.errMsg);
 
-    if(isLoading) {
+    if (isLoading) {
         return (
-            <Row>
-                <Loading />
-            </Row>
+           <Loading />           
         );
     }
 
-    if(errMsg) {
+    if (errMsg) {
         return (
-            <Row>
-                <Error errMsg={errMsg} />
-            </Row>
+            <Error errMsg={errMsg} />
         );
     }
 
@@ -34,7 +30,7 @@ const CommentsList = ({ campsiteId }) => {
                 {comments.map((comment) => {
                     return <Comment key={comment.id} comment={comment} />;
                 })}
-                <CommentForm campsiteId={campsiteId}/>;
+                <CommentForm campsiteId={campsiteId} />;
             </Col>
         );
     }
